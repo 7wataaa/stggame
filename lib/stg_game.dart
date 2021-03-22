@@ -12,6 +12,17 @@ class STGGame extends Game with TapDetector {
     final bgPaint = Paint()..color = const Color(0xff37474f);
 
     canvas.drawRect(bgRect, bgPaint);
+
+    //target
+    final targetOffset = Offset(screen.width / 2, screen.height / 5);
+    final targetPaint = Paint()..color = const Color(0xffff0000);
+    canvas.drawCircle(targetOffset, 10, targetPaint);
+
+    //player
+    final playerOffset =
+        Offset(screen.width / 2, screen.height - screen.height / 5);
+    final playerPaint = Paint()..color = const Color(0xf0ffffff);
+    canvas.drawCircle(playerOffset, 10, playerPaint);
   }
 
   @override
